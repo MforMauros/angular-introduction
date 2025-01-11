@@ -80,19 +80,19 @@ export class UserRegistrationComponent {
     this.registrationStatus = { success: false, message: 'Not attempted yet' };
   }
 
-  // check_duplicate_email() {
-  //   const email = this.form.get('email').value;
+  check_duplicate_email() {
+    const email = this.form.get('email').value;
 
-  //   this.userService.check_duplicate_email(email).subscribe({
-  //     next: (response) => {
-  //       console.log(response.msg);
-  //       this.form.get('email').setErrors(null);
-  //     },
-  //     error: (response) => {
-  //       const message = response.error.msg;
-  //       console.log(message);
-  //       this.form.get('email').setErrors({ duplicateEmail: true });
-  //     },
-  //   });
-  // }
+    this.userService.check_dublicate_email(email).subscribe({
+      next: (response) => {
+        console.log(response.msg);
+        this.form.get('email').setErrors(null);
+      },
+      error: (response) => {
+        const message = response.error.msg;
+        console.log(message);
+        this.form.get('email').setErrors({ duplicateEmail: true });
+      },
+    });
+  }
 }
