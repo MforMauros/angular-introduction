@@ -2,6 +2,7 @@
   "name": "angular-introduction",
   "version": "0.0.0",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -22,6 +23,7 @@
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
     "bootstrap": "^5.3.3",
+    "jwt-decode": "^4.0.0",
     "lodash-es": "^4.17.21",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -34,13 +36,18 @@
     "@types/jasmine": "~5.1.0",
     "@types/lodash-es": "^4.17.12",
     "angular-cli-ghpages": "^2.0.3",
+    "gh-pages": "^6.3.0",
     "jasmine-core": "~5.2.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "npm-force-resolutions": "^0.0.10",
     "prettier": "^3.3.3",
     "typescript": "~5.5.2"
+  },
+  "resolutions": {
+    "gh-pages": "^6.3.0"
   }
 }
